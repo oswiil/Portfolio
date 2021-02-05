@@ -1,0 +1,137 @@
+
+***
+## Bull Academy Project 
+`10/10/2020`
+
+> Usando Wordpress para hacer un e-commerce de cursos Online
+
+
+Wordpress representa un 40%  de cuota de mercado de páginas web actualmente en 2021. Y no es de extrañar teniendo en cuenta la enorme comunidad que le respalda.
+Siempre tienes varios plugins para múltiples soluciones. En este caso no fue una excepción. Este proyecto lo hicimos prácticamente entre 2 personas. El resultado se puede ver
+en [Bull.academy](https://bull.academy)
+
+
+
+__Bull Academy Arquitectura de plugins:__
+
+* Template : [Neve](https://es.wordpress.org/themes/neve/)
+* Diseño Web: Figma, ElementorPro, Guttenberg , Orbit Fox
+* Videos: [Super Video Player](https://wordpress.org/plugins/super-video-player/)
+* Tienda : [WooCommerce](https://es.wordpress.org/plugins/woocommerce/)
+* Pasarelas de pago: Coinbase Commerce , Stripe
+* Login :  [SuperSocializer](https://es.wordpress.org/plugins/super-socializer/) 
+* Cursos : [NamasteLMS](https://es.wordpress.org/plugins/namaste-lms/) , [WatuQuiz](https://es.wordpress.org/plugins/watu/)
+* Cloud : AWS, [WP Offload Media](https://es.wordpress.org/plugins/amazon-s3-and-cloudfront/)
+* Administración del hosting y billing : [WHMCMS](https://dinosaurusweb.com/billing/) , [CPanel](https://cpanel.net/)
+* Securización : [HTTP Headers](https://es.wordpress.org/plugins/http-headers/) ,  [WP Offload Media](https://es.wordpress.org/plugins/amazon-s3-and-cloudfront/)
+
+***
+__Workflow__
+
+Decidimos dividir el trabajo con [Wecan](https://kanbantool.com/es/) y definirlo en estos 4 campos:
+
+* Diseño 
+* Canvas 
+* Wordpress 
+* OPS
+
+
+<img src="https://i.ibb.co/N2KhW5k/WECAN.png" alt="KANBAN"
+	title="Metodología ágil" width="40%" height="40%" />
+
+En este blog  me centraré en Canvas, Diseño y Wordpress. Que son los campos que he trabajado más.
+
+__Diseño__ 
+
+
+Empezando de desde 0. Tenía que hacer la imagen de marca. Para trabajar en esto me puse en contacto más cercano con el cliente. En varias llamadas me quedó clara la idea. Quería una mascota que identificara el target de la academia y decidimos que un toro podría tener la fuerza necesaria para transmitir eso.
+El concepto de Network es primordial para esta marca  ya que el cliente se dedica al Network Marketing. 
+Partiendo de esta ilustración tan simplificada.  El resultado:
+
+| <img src="https://i.ibb.co/jWHPHwh/f04bbc82d5db0cce9615e1b60b44a08f.jpg" alt="Sketch"
+	title="Prototipo" width="25%" height="25%" /> + <img src="https://i.ibb.co/9gMCmBS/Vector-illustration-of-Social-Network.jpg" alt="Network"
+	title="Network Marketing" width="30%" height="30%" />  = <img src="https://i.ibb.co/c20gN3m/1.png" alt="Logo"
+	title="Logo Bull Academy" width="30%" height="30%" />
+
+
+
+No entraré en más detalle del proceso de creación de marca, el objetivo del blog es explicar los workflows del proyecto general.
+Teniendo al cliente contento con el Logo gané tiempo para dedicar al diseño Web. 
+Usé [Figma](https://figma.com) una herramienta de edición de archivos compartida muy trending actualmente para este tipo de tareas.
+Puedes compartir en vivo tus diseños con varias personas y recibir feedback. Figma fue muy efectivo, establecí los colores de marca, como sería el Look & Feel, el diseño de las ilustraciones en las distintas páginas y quedó algo así.
+
+| <img src="https://i.ibb.co/6YPMxVn/Colores-Blog.png" alt="Colores"
+	title="Colores de marca" width="30%" height="30%" />
+| <img src="https://i.ibb.co/k64XVZ0/mockup-to-web.png" alt="Web"
+	title="Diseño Web partiendo de mockups" width="40%" height="40%" />| 
+
+
+
+Una vez el look & Feel del proyecto ya está definido. Debía implementarlo en un Wordpress . Cierto que Worpdress tiene gran cantidad de plantillas para no tener que empezar un proyecto desde 0. Analizando las funcionalidades que necesitabamos me quedé con [Neve](https://es.wordpress.org/themes/neve/)
+Esta plantilla me pareció muy accesible, tenía blog integrado, logotipo , menus , cabeceras y colores personalizados.
+
+
+
+El editor de wordpress está enfocado para crear blogs. Es decir, sus widgets prefabricados son cajas de texto, cajas para imagenes... Pero si quieres widgets personalizables mejor buscar un pageBuilder alternativo.
+Hay infinidad de PageBuilder en el mercado, sin buscar demasiado encontré [Elementor](https://elementor.com/). Del cual me enamoré.
+
+<img src="https://i.ibb.co/59RqV2V/elementor.png" alt="Elementor"
+	title="Elementor PageBuilder" width="40%" height="40%" />
+
+Este constructor de páginas es una maravilla. Te permite hacer todo tipo de virguerías y más. Encima tiene una workshop con muchos bloques, páginas y presets de widgets usables en tu proyecto.
+Partiendo de un diseño móvil, lo escalé a diseño escritorio. Así nuestra página no tendría problemas de responsive.
+
+|  <img src="https://i.ibb.co/4K86SmT/bull-movil.png" alt="Elementor" title="Elementor PageBuilder" width="16%" height="16%" /> | <img src="https://i.ibb.co/x1Pmt3B/bullpc.png" alt="Elementor" title="Elementor PageBuilder" width="40%" height="40%" /> |
+
+Super Video Player es el plugin para el reproductor de videos. Es totalmente personalizable y selfhosted. Para usarlo es cargar un video desde el Escritorio de Wordpress y generar un ShortCode. Este shortcode es un id del video. Copiamos este shortcode y en la página lo implementamos con un Widget para Shortcodes.
+Había problemas de sonido con los videos que subimos. Al parecer, en los browsers de iphone como safari , el audio no se escuchaba. Esto que en un principio pensé que se debía al reproductor de video. Era por el codec de audio. Solucionado usando contenedor MP4, codec de video H.264 y de audio ACC.
+
+
+__CANVAS__
+
+Es aquí donde empezamos a combinar el constructor Elementor con NamasteLMS, plugins de videos, shortcodes...
+NamasteLMS  es un Learning Managment System. No demasiado complejo pero  debes usar una estructura determinada para el diseño de los cursos.
+
+* Courses
+* Modules
+* Lessons
+
+Tan simple como que Courses engloba a Modules y este engloba Lessons. Es decir, un conjunto de lecciones forman un módulo y un curso está compuesto de módulos.
+Comenzamos creando un curso.
+
+<img src="https://i.ibb.co/HzVwdrW/namaste.png" alt="Juego"
+	title="NamasteCourse" width="90%" height="90%" />
+
+
+
+Conceptos claves del funcionamiento:
+
+* El __Enrollment__ significa tener acceso o no al curso. Sin estar enrolled no puedes acceder al contenido. 
+* __Automatización__ y __Prerrequisitos__. Enrollments automáticos a partir del registro en la página. No puedes acceder a la segunda lección sin haber visto la anterior.
+
+La creación de lecciones y módulos va muy ligada a la imagen anterior. Simplemente definir a que curso pertenece cada clase, definir la puntuación al completar la lección para contabilizar el progreso.
+La navegación entre cursos la manejas con shortcodes * [namaste-course-link] * como este.
+La metadata, las tareas de cada lección también con shortcodes  * [namaste-todo post_type="namaste_lesson" post_id="3149"] *
+
+Si estás interesado en este plugin, aquí tienes la [documentación](https://namaste-lms.org/help.php?tab=shortcodes).
+
+
+Este curso es accesible por ti una vez te registras en la página. Pero qué pasaría si decidieramos hacer cursos de pago?.
+Para solucionar este problema Integramos El namaste WooCommerce Bridge. Un plugin que te permite vincular tus cursos NamasteLMS a productos del WooCommerce.
+Así que tocando estos atributos del producto y poniendo el nombre * namaste-course * y valor * 1131( el ID específico del post) * puedes ponerle un precio a tus cursos.
+
+<img src="https://i.ibb.co/Wk4pC9X/prducto.png" alt="Producto"
+	title="Producto WooCommerce" width="90%" height="90%" />
+
+
+>SUMARIO
+
+Este proyecto ha sido grande, el cliente era la primera vez que queria expandir su negocio al Online y las funcionalidades cambiaron y maduraron durante el proceso.
+Pese a los cambios y contratiempos acabamos desplegando esta página el verano de 2020. Y haciendo la llamada de marketing al cabo de un mes.
+
+Hemos aprendido a conectar Wordpress con varios LMS. También hemos encontrado este Stack de plugins que bien combinados haces páginas potentes.
+
+
+***
+
+
