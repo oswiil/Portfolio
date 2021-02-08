@@ -48,6 +48,7 @@ const theme = merge(tailwind, {
   },
   styles: {
     root: {
+     
       margin: 0,
       padding: 0,
       boxSizing: `border-box`,
@@ -118,6 +119,7 @@ const theme = merge(tailwind, {
   layout: {
     container: {
       maxWidth: `5xl`,
+      
     },
   },
   buttons: {

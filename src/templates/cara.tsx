@@ -4,24 +4,23 @@ import Layout from "../components/layout"
 import Hero from "../components/hero"
 import Projects from "../components/projects"
 import About from "../components/about"
-import Header from "../components/header"
+
 import Contact from "../components/contact"
+
 
 const Cara = () => (
   
- 
   <Layout>
-    <Parallax pages={5}>
-    <Header offset={0} factor={1}/>
-      <Hero offset={0} factor={1} />
-     
-      <Projects offset={1} factor={2} />
+
+    <Parallax pages={5}> 
     
-      <About offset={3} factor={1} />
-    
+      <Hero offset={0} factor={1} />    
+      <Projects offset={1} factor={2} />   
+      <About offset={3} factor={1} />    
       <Contact offset={4} factor={1} />
     </Parallax>
-</Layout>
+    </Layout>
+
 )
 
 export default Cara

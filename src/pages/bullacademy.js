@@ -4,22 +4,22 @@ import BlogMDX from "../sections/blog"
 import {Link , Button} from "theme-ui" 
 import { DiscussionEmbed } from 'disqus-react';
 import Header from "../components/header"
-
+import Layout from "../components/layout"
 
 
 
 
 const bullacademy = () => (
-
+<Layout>
   <div>
 
     
-    <Header offset={0} factor={1} sx={{ position: "fixed"}} />
+  
   <div style={{
  
     
    justifyContent:"center",
-   
+   overflowY:`none`,
     paddingTop: "5%",
     paddingLeft:"20%",
     paddingRight:"20%",
@@ -56,6 +56,6 @@ const bullacademy = () => (
     </div>
 
     </div>
-    
+    </Layout>
 )
 export default bullacademy

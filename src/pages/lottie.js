@@ -4,13 +4,14 @@ import LotieMDX from "../sections/lotie"
 import {Link , Button} from "theme-ui" 
 import { DiscussionEmbed } from 'disqus-react';
 import Header from "../components/header"
-import Layout from "@lekoarts/gatsby-theme-cara/src/components/layout";
+import Layout from "../components/layout"
 
 
 
 const lottie = () => (
+  <Layout>
 <div>
-<Header offset={0} factor={1} sx={{ position: "fixed"}} />
+
   <div style={{
  
     
@@ -50,6 +51,7 @@ const lottie = () => (
   </DiscussionEmbed>
     </div>
 </div>
+</Layout>
     
 )
 export default lottie

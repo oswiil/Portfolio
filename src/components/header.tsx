@@ -13,6 +13,7 @@ const Header = () => {
       <br />
       <Flex
         sx={{
+          overflow:`hidden`,
           position:`absolute`,
           alignItems: `left`,
           ml: 4,
@@ -35,6 +36,7 @@ const Header = () => {
       </Flex>
       <Flex
         sx={{
+          overflow:`hidden`,
           outline:`none`,
           justifyContent:`center`,
           mr:0,
@@ -42,6 +44,7 @@ const Header = () => {
           color: `text`,
           fontWeight: `semibold`,
           a: { color: `text` },
+           overflow:`hidden`,
         }}
       >
         {` `}

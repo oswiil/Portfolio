@@ -8,6 +8,7 @@ type LayoutProps = { children: React.ReactNode; className?: string }
 
 const Layout = ({ children, className = `` }: LayoutProps) => (
   <React.Fragment>
+   <Header offset={0} factor={1} />
     <Global
       styles={(theme) => ({
         "*": {
@@ -20,8 +21,10 @@ const Layout = ({ children, className = `` }: LayoutProps) => (
           },
         },
         html: {
+          
           fontSize: `18px`,
           WebkitTextSizeAdjust: `100%`,
+          
         },
         img: {
           borderStyle: `none`,
@@ -32,6 +35,7 @@ const Layout = ({ children, className = `` }: LayoutProps) => (
         },
         "[hidden]": {
           display: `none`,
+          
         },
         "::selection": {
           backgroundColor: theme.colors.primary,
