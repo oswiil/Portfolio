@@ -35,10 +35,13 @@ const Contact = ({ offset, factor = 1 }: { offset: number; factor?: number }) =>
       </div>
     </Divider>
     <Content speed={0.4} offset={offset} factor={factor}>
+
       <Inner>
       <img src="https://i.ibb.co/C2sTRFz/FOTO-PERFIL-edit.png" width="120px" /> 
         <ContactMDX />
+        
       </Inner>
+      
       <Footer />
     </Content>
     <Divider speed={0.1} offset={offset} factor={factor}>

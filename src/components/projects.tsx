@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Link } from "theme-ui"
+import { jsx, Link} from "theme-ui"
 import Divider from "../elements/divider"
 import Inner from "../elements/inner"
 import Content from "../elements/content"
@@ -18,7 +18,7 @@ var images = [
 const Projects = ({ offset, factor = 2 }: { offset: number; factor?: number }) => (
   <div id="middle">
     <Divider
-     bg="divider"
+    
       sx={{ clipPath: `polygon(0 5%, 100% 25%, 100% 85%, 0 75%)` }}
       speed={-0.2}
       offset={1.1}
@@ -29,7 +29,7 @@ const Projects = ({ offset, factor = 2 }: { offset: number; factor?: number }) =
     <Content speed={0.4} offset={offset + 0.2} factor={factor} sx={{background:"divider"}}>
       <Inner>
     
-        <div 
+        <div id="aqui"
           sx={{
             display: `grid`,
             gridGap: [4, 4, 4, 5],
@@ -42,7 +42,7 @@ const Projects = ({ offset, factor = 2 }: { offset: number; factor?: number }) =
           <ProjectsMDX />
           
         </div>
-        
+          
       </Inner>
     </Content>
     

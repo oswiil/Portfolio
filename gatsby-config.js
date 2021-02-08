@@ -47,6 +47,7 @@ module.exports = {
         ],
       },
     },
+    `gatsby-plugin-smoothscroll`,
     `gatsby-plugin-offline`,
     `gatsby-plugin-netlify`,
     shouldAnalyseBundle && {
