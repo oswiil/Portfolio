@@ -19,9 +19,13 @@ const About = ({ offset, factor = 1 }: { offset: number; factor?: number }) => (
     />
     <Divider speed={0.1} offset={offset} factor={factor}>
       <UpDown>
+      <SVG icon="illustrator" width={100}  color="icon_orange" left="89%" top="1%" /> 
+      <SVG icon="unity" width={200}  color="white" left="89%" top="50%" /> 
+        <SVG icon="wordpress" width={90} color="icon_blue" left="75%" top="75%" />   
       </UpDown>
       <UpDownWide>
-    
+      <SVG icon="git" width={90} color="icon_black" left="10%" top="1%" />
+        <SVG icon="android" width={50}  color="icon_green" left="20%" top="80%" />
       </UpDownWide>
    
     </Divider>

@@ -29,7 +29,7 @@ const Header = () => {
           sx={{ ml: 2 }}
           href="/"
         >
-          OSWIL PORTFOLIO
+          Oscar | Portfolio
         </Link>
      
       </Flex>
