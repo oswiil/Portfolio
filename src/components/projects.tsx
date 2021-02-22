@@ -24,6 +24,7 @@ const Projects = ({ offset, factor = 2 }: { offset: number; factor?: number }) =
     
         <div id="aqui"
           sx={{
+            
             display: `grid`,
             gridGap: [4, 4, 4, 5],
             gridTemplateColumns: [`1fr`, `1fr`, `repeat(2, 1fr)`],

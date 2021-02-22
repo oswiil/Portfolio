@@ -1,6 +1,5 @@
 /** @jsx jsx */
 import { jsx, Link , Button} from "theme-ui"
-
 import Divider from "../elements/divider"
 import Inner from "../elements/inner"
 import Content from "../elements/content"
@@ -35,11 +34,13 @@ const Hero = ({ offset, factor = 1 }: { offset: number; factor?: number }) => (
         </InnerWave>
       </div>
     </Divider>
+    
     <Content speed={0.4} offset={offset} factor={factor}>
-      <Inner>
-      <div class="typewriter">
-        <Intro />
-        </div>
+      <Inner>   
+
+      <div class="css-typing"> 
+      <Intro />
+      </div>  
       </Inner>
     </Content>
     
