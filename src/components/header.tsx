@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { Box, Flex, Link, useColorMode, jsx } from "theme-ui"
-
+import Inner from "../elements/inner"
+import Content from "../elements/content"
 const Header = () => {
   const [colorMode, setColorMode] = useColorMode()
   const isDark = colorMode === `dark`
@@ -8,58 +9,36 @@ const Header = () => {
     setColorMode(isDark ? `light` : `dark`)
   }
   return (
+    
     <Box as="header" variant="header">
-     
+      
+      
+   
+      
+     <Flex sx={{ p:3, justifyContent:'center', alignItems:'center',color: `text`, a: { color: `text` }}}>
       <br />
-      <Flex
-        sx={{
-          overflow:`hidden`,
-          position:`absolute`,
-          alignItems: `left`,
-          ml: 4,
-          
-          justifyContent: `center`,
-          color: `text`,
-          fontWeight: `bold`,
-          a: { color: `text` },
-        }}
-      >
+     
       <img width="40" height="40" src="https://i.ibb.co/C2sTRFz/FOTO-PERFIL-edit.png"  alt="Mi cara" />
       <Link
           aria-label="Link to the theme's GitHub repository"
-          sx={{ ml: 2 }}
+          sx={{ ml: 20 }}
           href="/"
         >
           Oscar | Portfolio
         </Link>
-     
-      </Flex>
-      <Flex
-        sx={{
-          overflow:`hidden`,
-          outline:`none`,
-          justifyContent:`center`,
-          mr:0,
-          mt: 0,
-          color: `text`,
-          fontWeight: `semibold`,
-          a: { color: `text` },
-           overflow:`hidden`,
-        }}
-      >
-        {` `}
-
-        <div  sx={{display: `block`, mx: `auto`, mb: 3 }}></div>
-        {` `}
-        <button
-        sx={{ variant: `buttons.toggle`, fontWeight: `semibold`, display: `block`, mx: 20, mb: 3 }}
+ 
+      <button sx={{float: `right`}}
+        sx={{ variant: `buttons.toggle`, fontWeight: `semibold` }}
         onClick={toggleColorMode}
         type="button"
         aria-label="Toggle dark mode"
       >
         {isDark ? `Claro` : `Oscuro`}
       </button>
-      </Flex>
+    
+          </Flex>
+       
+      
     </Box>
 
     

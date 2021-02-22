@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import React from "react"
 import { jsx , Link, Button} from "theme-ui"
+import { tailwind } from "@theme-ui/presets"
 
 type ProjectCardProps = {
   link: string
@@ -13,7 +14,7 @@ type ProjectCardProps = {
 
 }
 
-const ProjectCard = ({ link, title, children, bg, icon, icon1, button }: ProjectCardProps) => (
+const ProjectCard = ({ link, title, children, icon, icon1, button }: ProjectCardProps) => (
 
   <a
     href={link}
@@ -27,12 +28,12 @@ const ProjectCard = ({ link, title, children, bg, icon, icon1, button }: Project
       borderRadius: `lg`,
       px: 4,
       py: [4, 5],
-      color: `white`,
-      background: bg ,
+      
+      bg: `divider` ,
       
       transition: `all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important`,
       "&:hover": {
-        color: `white`,
+        color: `black`,
         transform: `translateY(-20px)`,
         boxShadow: `xl`,
       },

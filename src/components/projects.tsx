@@ -17,16 +17,9 @@ var images = [
    
 const Projects = ({ offset, factor = 2 }: { offset: number; factor?: number }) => (
   <div id="middle">
-    <Divider
+   
     
-      sx={{ clipPath: `polygon(0 5%, 100% 25%, 100% 85%, 0 75%)` }}
-      speed={-0.2}
-      offset={1.1}
-      factor={factor}
-      
-    />
-    
-    <Content speed={0.4} offset={offset + 0.2} factor={factor} sx={{background:"divider"}}>
+    <Content speed={0.4} offset={0.8 + 0.2} factor={factor} sx={{background:"divider"}}>
       <Inner>
     
         <div id="aqui"

@@ -31,7 +31,9 @@ const About = ({ offset, factor = 1 }: { offset: number; factor?: number }) => (
     </Divider>
     <Content speed={0.4} offset={offset} factor={factor}>
       <Inner>
+      
         <AboutMDX />
+        
       </Inner>
     </Content>
   </div>
