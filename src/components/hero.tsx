@@ -43,7 +43,7 @@ const Hero = ({ offset, factor = 1 }: { offset: number; factor?: number }) => (
       </div>  
       </Inner>
       <div sx={{ position: 'fixed', mt: '20%', ml: '50%', Zindex:-2}}>
-      <img src="https://svgshare.com/i/UQ8.svg" width="170%"/>
+      <img src="https://svgshare.com/i/UQ8.svg" width="190%"/>
       <UpDown>
       <SVG icon="illustrator" width={5} color="icon_black" left="150%" top="-20%" />
       <SVG icon="java" width={5} color="icon_black" left="170%" top="30%" />
