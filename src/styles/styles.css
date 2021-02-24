@@ -8,7 +8,7 @@
     overflow: hidden;
     justify-content: center;
     align-items: center;
-    width: fit-content;
+   
   }
   .css-typing h2:nth-child(1) {
     overflow-wrap: break-word;
